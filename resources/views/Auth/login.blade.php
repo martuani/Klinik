@@ -39,44 +39,7 @@
 </div>
 
 
-<header class="header style2 navbar-area">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-12">
-<div class="nav-inner">
-<nav class="navbar navbar-expand-lg">
-<a class="navbar-brand" href="index-2.html">
-<img src="assets/images/logo/logo.svg" alt="Logo">
-</a>
-<button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="toggler-icon"></span>
-<span class="toggler-icon"></span>
-<span class="toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-<ul id="nav" class="navbar-nav ms-auto">
-<li class="nav-item">
-<a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Home</a>
-<ul class="sub-menu collapse" id="submenu-1-1">
-<li class="nav-item"><a href="index-2.html">University</a></li>
-<li class="nav-item"><a href="index2.html">Online Course</a></li>
-<li class="nav-item"><a href="index3.html">Training Institute</a></li>
-</ul>
-</li>
-<li class="nav-item"><a href="contact.html">Tentang</a></li>
-<li class="nav-item"><a href="contact.html">Contact</a></li>
- </ul>
-<form class="d-flex search-form">
-<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success" type="submit"><i class="lni lni-search-alt"></i></button>
-</form>
-</div> 
-</nav> 
-</div>
-</div>
-</div> 
-</div> 
-</header>
+
 
 
 <section class="login section">
@@ -85,14 +48,20 @@
 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
 <div class="form-head">
 <h4 class="title">Silahkan Login</h4>
-<form action="#!" method="post">
+
+@error("message")
+                    <p class="text-danger">{{$message}}</p>
+                @enderror
+                
+<form action="/login" method="post">
+  @csrf 
 <div class="form-group">
-<label>Username/Email</label>
-<input class="margin-5px-bottom" type="email" id="username" placeholder="Masukkan Username/Email">
+<label>ID Petugas</label>
+<input class="margin-5px-bottom" type="text" id="id" name="id" placeholder="Masukkan ID Petugas" autofocus required>
 </div>
 <div class="form-group">
 <label>Password</label>
-<input class="margin-5px-bottom" type="password" id="password" placeholder="Masukkan Password">
+<input class="margin-5px-bottom" type="password" id="petugas_password" name="petugas_password" required>
 </div>
 <div class="check-and-pass">
 <div class="row align-items-center">
@@ -102,16 +71,13 @@
 <label class="form-check-label">Ingat Saya</label>
 </div>
 </div>
-<div class="col-lg-6 col-12">
-<a href="javascript:void(0)" class="lost-pass">Ingat Saya?</a>
-</div>
+
 </div>
 </div>
 <div class="button">
 <button type="submit" class="btn">Log In</button>
 </div>
-<p class="outer-link">Belum punya akun? <a href="{{ route('auth.register') }}">Register here</a>
-</p>
+
 </form>
 </div>
 </div>
@@ -120,12 +86,6 @@
 </section>
 
 
-
-
-
-<a href="#" class="scroll-top btn-hover">
-<i class="lni lni-chevron-up"></i>
-</a>
 
 <script src="{{asset ('edugrids/assets/js/bootstrap.min.js')}}"></script>
 <script src="{{asset ('edugrids/assets/js/count-up.min.js')}}"></script>

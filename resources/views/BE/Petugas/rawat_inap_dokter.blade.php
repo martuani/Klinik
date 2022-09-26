@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rawat Inap Dokter</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/app.css')}}">
+    <link rel="shortcut icon" href="{{asset ('assets/images/favicon.svg" type="image/x-icon')}}">
+</head>
+
 @extends('BE.layouts.dokter')
 @section('content')
 
@@ -5,13 +24,13 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>Obat dan Alat Kesehatan</h3>
+                            <h3>Rawap Inap Instruksi Dokter</h3>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Form Petugas</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Rawap Inap Instruksi Dokter</li>
                                 </ol>
                             </nav>
                         </div>

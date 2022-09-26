@@ -1,9 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
+use App\Petugas;
+use App\levels;
+use Illuminate\Contracts\Session\Session;
+use StaticVariable;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Validator;
 
 class AuthController extends Controller
 {
@@ -12,9 +21,52 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
+    function login()
     {
         return view('Auth.login');
+    }
+
+    function masuk(Request $request)
+    {
+        $id = $request->id;
+        $password = $request->petugas_password;
+        $petugas = Petugas::where("id", $id)->first();
+        if ($petugas) {
+            // Will do authentication 
+            if (password_verify($password, $petugas->petugas_password)) {
+                if ($petugas->levels) {
+                    if ($petugas->levels->level_nama === "Dokter"){
+                        session()->put('Auth', $petugas);
+                        return redirect()->route('admin.index1');
+                    }
+                    if ($petugas->levels->level_nama === "Perawat"){
+                        session()->put('Auth', $petugas);
+                        return redirect()->route('petugas.pemeriksaan');
+                    }
+                    if ($petugas->levels->level_nama === "Apoteker"){
+                        session()->put('Auth', $petugas);
+                        return redirect()->route('petugas.pemeriksaan');
+                    }
+                    if ($petugas->levels->level_nama === "Tenaga Teknis Kefarm"){
+                        session()->put('Auth', $petugas);
+                        return redirect()->route('petugas.pemeriksaan');
+                    }
+                    if ($petugas->levels->level_nama === "Admin"){
+                        session()->put('Auth', $petugas);
+                        return redirect()->route('petugas.pemeriksaan');
+                    }
+                    
+                } else {
+                    session()->put('Auth', $petugas);
+                    return redirect()->route('petugas.pemeriksaan');
+
+                }
+            } else {
+                return redirect()->back()->withErrors(["message" => "Password salah"])->withInput();
+            }
+        } else {
+            return redirect()->back()->withErrors(["message" => "ID Tidak terdaftar"])->withInput();
+        }
     }
 
     /**

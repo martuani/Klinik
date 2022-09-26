@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Jadwal;
+use App\level;
+use App\KategoriPasien;
+use App\Petugas;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Validator;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -21,9 +28,27 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addpetugas()
     {
-        //
+        return view('Admin.add_data_petugas');
+    }
+
+    public function tambahpetugas(Request $request)
+    {
+        $validatedData = $request->validate([
+            'petugas_nama' => 'required',
+            'petugas_email' => 'required',
+            'petugas_password' => 'required|min:8',
+            'petugas_jadwal' => 'required',
+            'petugas_telp' => 'required',
+            'petugas_level' => 'required'
+        ]);
+
+        $validatedData['petugas_password'] = Hash::make($validatedData['petugas_password']);
+
+        Petugas::create($validatedData);
+
+        return redirect('/login');
     }
 
     /**

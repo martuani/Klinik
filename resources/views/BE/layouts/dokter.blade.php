@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form </title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/style.css')}}">
-
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/app.css')}}">
-    <link rel="shortcut icon" href="{{asset ('assets/images/favicon.svg" type="image/x-icon')}}">
-</head>
 
 <body>
     <div id="app">
@@ -43,6 +26,41 @@
                         </li>            
 
 
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-collection-fill"></i>
+                                <span>Pemeriksaan</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.rekam_medis') }}">Rekam Medis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.rawat_inap_dokter') }}">Rawat Inap Dokter</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.persetujuan_tindakan_medis') }}">Persetujuan Tindakan Medis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.pemeriksaan_narkoba') }}">Pemeriksaan Narkoba</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.pemantauan_covid') }}">Pemantauan Covid-19</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('petugas.pemantauan_alat_vital') }}">Pemantauan Alat Vital</a>
+                                    <li class="submenu-item ">
+                                        <a href="{{ route('petugas.keterangan_berobat') }}">Keterangan Berobat</a>
+                                    </li>
+                                    </li><li class="submenu-item ">
+                                        <a href="{{ route('petugas.kecelakaan_kerja') }}">Kecelakaan Kerja</a>
+                                    </li>
+                                </li><li class="submenu-item ">
+                                    <a href="{{ route('petugas.izin_berobat') }}">Izin Berobat</a>
+                                </li>
+                                </li>
+                            </ul>
+                        </li>
 
                         <li class="sidebar-item  ">
                             <a href="#" class='sidebar-link'>

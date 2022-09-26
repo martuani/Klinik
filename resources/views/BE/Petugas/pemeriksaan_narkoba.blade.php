@@ -1,11 +1,30 @@
-@extends('BE.layouts.sidebar')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemeriksaan Narkoba</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/app.css')}}">
+    <link rel="shortcut icon" href="{{asset ('assets/images/favicon.svg" type="image/x-icon')}}">
+</head>
+
+@extends('BE.layouts.dokter')
 @section('content')
 
 <div class="page-heading">
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>Obat dan Alat Kesehatan</h3>
+                            <h3>Pemeriksaan Narkoba</h3>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -139,8 +158,8 @@
                                                         <label>Divisi</label>
                                                     </div>
                                                     <div class="col-md-4 form-group">
-                                                        <input type="text" id="perusahaan" class="form-control"
-                                                            name="perusahaan" placeholder="Perusahaan" required disabled>
+                                                        <input type="text" id="divisi" class="form-control"
+                                                            name="divisi" placeholder="Perusahaan" required disabled>
                                                     </div>
                                                     <div class="col-md-6">
                                                         </div>

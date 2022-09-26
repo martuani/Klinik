@@ -19,14 +19,15 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+        if ($request->session()->get('Auth', null) !== null) {
+            $petugas = session()->get('Auth', null);
+            if ($petugas->level) {
+                if ($petugas->level->level_nama === "Dokter") {
+                    return redirect()->route('petugas.home1');
+                }
+            } else {
+                return redirect()->route('Auth.register');
             }
-        }
-
-        return $next($request);
+        } 
     }
 }

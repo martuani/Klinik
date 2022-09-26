@@ -51,8 +51,8 @@
 <div class="col-lg-4 col-md-6 col-12">
 <div class="toolbar-login">
 <div class="button" >
-<a href="{{ route('auth.register') }} " style="color: white">Register</a>
-<a href="{{ route('auth.login') }}" class="btn" style="color: white">Login</a>
+<a href="{{ route('Auth.register') }} " style="color: white">Register</a>
+<a href="{{ route('Auth.login') }}" class="btn" style="color: white">Login</a>
 </div>
 </div>
 </div>
@@ -156,26 +156,26 @@
 <div class="row">
 <div class="col-lg-3 col-md-3 col-12">
 <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
-<h3 class="counter"><span id="secondo1" class="countup" cup-end="500">500</span>+</h3>
-<h4>Happy Clients</h4>
+<h3 class="counter"><span id="secondo1" class="countup" cup-end="500">1000</span>+</h3>
+<h4>Pengunjung</h4>
 </div>
 </div>
 <div class="col-lg-3 col-md-3 col-12">
 <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
-<h3 class="counter"><span id="secondo2" class="countup" cup-end="70">70</span>+</h3>
-<h4>Online Courses</h4>
+<h3 class="counter"><span id="secondo2" class="countup" cup-end="70">450</span>+</h3>
+<h4>Karyawan</h4>
 </div>
 </div>
 <div class="col-lg-3 col-md-3 col-12">
 <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-<h3 class="counter"><span id="secondo3" class="countup" cup-end="100">100</span>%</h3>
-<h4>Satisfaction</h4>
+<h3 class="counter"><span id="secondo3" class="countup" cup-end="100">100</span>+</h3>
+<h4>Mitra</h4>
 </div>
 </div>
 <div class="col-lg-3 col-md-3 col-12">
 <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-<h3 class="counter"><span id="secondo3" class="countup" cup-end="100">100%</span>%</h3>
-<h4>Support</h4>
+<h3 class="counter"><span id="secondo3" class="countup" cup-end="100">300</span>+</h3>
+<h4>Penduduk Lokal</h4>
 </div>
 </div>
 </div>

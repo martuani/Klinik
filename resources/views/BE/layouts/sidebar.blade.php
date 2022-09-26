@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form </title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/style.css')}}">
-
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
-    <link rel="stylesheet" href="{{asset ('mazer-main/dist/assets/css/app.css')}}">
-    <link rel="shortcut icon" href="{{asset ('assets/images/favicon.svg" type="image/x-icon')}}">
-</head>
 
 <body>
     <div id="app">
@@ -36,7 +19,7 @@
                         <li class="sidebar-title">Menu</li>
 
                         <li class="sidebar-item  ">
-                            <a href="{{ route('auth.register') }}" class='sidebar-link'>
+                            <a href="{{ route('Auth.register') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Halaman Utama</span>
                             </a>
